@@ -15,7 +15,7 @@ const capabilities = {
   'build': 'Sky NodeJS Samples - Single' // CI/CD job or build name
  }
 
-async function runTestWithCaps () {
+async function runTestOnBrowserStack () {
   let driver = new webdriver.Builder().usingServer('https://' + process.env.BROWSERSTACK_USERNAME + ':' + process.env.BROWSERSTACK_ACCESS_KEY + '@hub-cloud.browserstack.com/wd/hub').withCapabilities(capabilities).build();
   try {
     // Open the webpage
@@ -44,4 +44,4 @@ async function runTestWithCaps () {
   await driver.quit();
 }
 
-runTestWithCaps();
+runTestOnBrowserStack();
