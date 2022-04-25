@@ -2,7 +2,7 @@ const webdriver = require('selenium-webdriver');
 const { By } = require('selenium-webdriver');
 const assert = require('assert');
 
-async function runTestWithCaps (capabilities) {
+async function runTestOnLocalDriver () {
   let driver = new webdriver.Builder().forBrowser('chrome').build();
   try{
     // Open the webpage
@@ -32,6 +32,5 @@ async function runTestWithCaps (capabilities) {
 const capabilities = [{}];
 
 // The following code runs the test function as many times the capabilities are defined
-capabilities.map(async (caps) => {
-  await runTestWithCaps(caps);
-  });
+
+runTestOnLocalDriver();
