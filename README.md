@@ -1,4 +1,4 @@
-![Logo](https://www.browserstack.com/images/static/header-logo.jpg)
+![Logo](https://cdn.freelogovectors.net/wp-content/uploads/2021/09/browserstack_logo-freelogovectors.net_.png)
 
 # Manual To Automation @ SKY - Lesson 2 Exam Answers <a href="https://nodejs.org/en/"><img src="https://brandslogos.com/wp-content/uploads/images/large/nodejs-icon-logo.png" alt="nodejs" height="22" /></a>
 
