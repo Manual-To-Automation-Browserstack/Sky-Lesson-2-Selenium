@@ -10,19 +10,38 @@ The trick to this solution is in figuring out how to navigate the contents of th
 
 ---
 
-## Repository setup
+## Installation
 
-- Clone the repository
+There are a few things that you will need before you can get started.
 
-- Ensure you have the following dependencies installed on the machine
-  - NodeJS >= 14.16.0 (includes npm 6.14.11)
+* NodeJS - use [this](https://phoenixnap.com/kb/install-node-js-npm-on-windows) guide for Windows and [this](https://nodesource.com/blog/installing-nodejs-tutorial-mac-os-x/) guide for Mac.
+* Git for pulling down the code - follow [this]() guide for installing Git on all platforms. There are other useful guides on the website mentioned previously. Start [here](https://github.com/git-guides) anad follow through to the various links to learn more about Git. It will be very useful on your automation journey. If you have any issues with tokens or user credentials, let me know as this can trip a lot of people up.
+* Visual Studio Code - You can download VS Code for free from [here](https://code.visualstudio.com/download). This is a very useful tool for writing and running your code as it has auto complete, and powerful debugging capabilities. [This](https://code.visualstudio.com/docs/introvideos/basics) is a handy starting point for how to get started with VS Code.
 
-- Run below command to configure dependencies
+Once you have these installed, you are good to go to the next step.
 
-    ```sh
-    npm install
-    ```
+Follow the below steps to get the code onto your local machine.
 
+* Open a terminal. (Terminal on Mac, Command Prompt on Windows)
+* Go to the directory where you want to place the code using [cd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd) for Windows, and it functions mostly the same for Mac. You just use "cd" but the folder structure on Mac is different (/Users/username/Documents instead of C:/Users/username/Documents)
+* Copy the following command into the terminal, (remember, you must have [Git](https://git-scm.com/downloads) installed)
+```sh
+git clone https://github.com/Manual-To-Automation-Browserstack/Sky-Lesson-2-Selenium.git.
+```
+* Move into the directory that you just cloned by typing
+```sh
+cd Sky-Lesson-2-Selenium
+```
+* When inside this directory, copy the following command and run it:
+```sh
+npm install
+```
+
+These scripts are useful to get started. You can add more as needed in the "scripts" section of the [package.json](./package.json) file. Once you have added one, you then simply run:
+
+```sh
+npm run <insert script name>
+```
 ## Available Tests
 
   This repository contains the following NodeJS tests:
@@ -34,6 +53,18 @@ The trick to this solution is in figuring out how to navigate the contents of th
   | Parallel BS    | Simple Search               | This runs the Simple Search test across 5 different devices in parallel. |
   
   ---
+
+Once all the dependencies are installed, you will be able to run the tests above by using the following commands:
+```sh
+# Runs the test locally on your machine using a local browser (Chrome)
+npm run local-driver
+
+# Runs the test on a single browser on BrowserStack
+npm run bs-single
+
+# Runs the test on 5 different browsers in parallel on BrowserStack
+npm run bs-parallel
+```
 
 # BrowserStack
 
@@ -58,4 +89,4 @@ The trick to this solution is in figuring out how to navigate the contents of th
   set BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
   ```
   
-  Alternatively, you can also hardcode username and access_key objects in conf files related to BrowserStack in a file under `./resources/conf/`.
+  Alternatively, you can also hardcode username and access_key objects in the code but this is NOT recommended.
